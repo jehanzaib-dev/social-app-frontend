@@ -7,9 +7,7 @@ import RightBar from '../../components/rightBar/rightBar.jsx';
 import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/authContext";
-import {followUserCall, getOneUserCall, unfollowUserCall, uploadImageCall, updateUserCall} from '../../apiCalls/apiCalls.js';
-import {Follow, UnFollow, UpdateUser} from '../../context/authActions.js';
-import axios from 'axios';
+import {getOneUserCall, uploadImageCall, updateUserCall} from '../../apiCalls/apiCalls.js';
 
 export default function Profile() {
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;

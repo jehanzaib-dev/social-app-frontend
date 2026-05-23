@@ -10,7 +10,7 @@ export default function LoginPage() {
   const password = useRef();
     const [frontendError, setFrontendError]=useState(null);
     const [backendError, setBackendError]=useState(null);
-  const { user, isFetching, error, dispatch } = useContext(AuthContext);
+  const { user, isFetching, dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
