@@ -12,9 +12,6 @@ import {getOneUserCall, uploadImageCall, updateUserCall} from '../../apiCalls/ap
 export default function Profile() {
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const { user:currentUser, dispatch } = useContext(AuthContext);
-  const [file, setFile] = useState(null);
-const [uploadType, setUploadType] = useState("");
-const [followed, setFollowed] = useState(false);
 const [profileUser, setProfileUser] = useState(null);
   const { username } = useParams();
 const isOwnProfile=currentUser._id === profileUser?._id;
