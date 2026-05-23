@@ -1,0 +1,194 @@
+.profile{
+  display: flex;
+  width: 100%;
+  background-color: #f4f6f9;
+}
+
+.profileRight{
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+}
+
+.profileRightTop{
+  width: 100%;
+}
+
+.profileCover{
+  position: relative;
+  height: 320px;
+}
+
+.profileCoverImg{
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.profileUserImg{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 150px;
+
+  border: 5px solid white;
+
+  background-color: white;
+
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.15);
+}
+.editCoverBtn {
+  position: absolute;
+  right: 10px;
+  bottom: 70px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profileInfo {
+  position: relative;
+}
+
+.editProfileBtn {
+  width: 120px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 5px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+.followButton {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: #1877f2;
+  color: white;
+  font-weight: 500;
+}
+
+.followButton:hover {
+  background-color: #0f5bd1;
+}
+
+.profileInfo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  padding: 10px 20px;
+}
+
+.profileInfoName{
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.profileInfoDesc{
+  font-size: 15px;
+  font-weight: 400;
+  color: #666;
+}
+
+.profileRightBottom{
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 992px){
+
+  .profileRightBottom{
+    flex-direction: column;
+  }
+
+  .profileUserImg{
+    width: 130px;
+    height: 130px;
+    top: 170px;
+  }
+
+  .profileInfo{
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  .profileCover{
+    height: 260px;
+  }
+
+  .profileCoverImg{
+    height: 200px;
+  }
+
+  .profileUserImg{
+    width: 110px;
+    height: 110px;
+    top: 140px;
+  }
+
+  .profileInfoName{
+    font-size: 24px;
+  }
+
+  .profileInfoDesc{
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .profileRightBottom{
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 576px){
+
+  .profileCover{
+    height: 220px;
+  }
+
+  .profileCoverImg{
+    height: 170px;
+  }
+
+  .profileUserImg{
+    width: 95px;
+    height: 95px;
+    top: 120px;
+    border-width: 4px;
+  }
+
+  .profileInfo{
+    margin-top: 55px;
+  }
+
+  .profileInfoName{
+    font-size: 21px;
+  }
+
+  .profileInfoDesc{
+    font-size: 14px;
+  }
+}

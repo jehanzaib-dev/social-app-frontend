@@ -1,0 +1,43 @@
+.homePage {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f5f6f7;
+}
+
+.homeContainer {
+  display: flex;
+  height: calc(100vh - 60px);
+  margin-top: 5px;
+}
+
+.leftSection {
+  flex: 2;
+  overflow: hidden;
+}
+
+.homeFeed {
+  flex: 5;
+  height: 100%;
+  overflow-y: auto;
+  padding:5px 20px;
+}
+
+.rightSection {
+  flex: 3;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+
+  .leftSection {
+    display: none;
+  }
+
+  .rightSection {
+    display: none;
+  }
+
+  .homeFeed {
+    flex: 1;
+  }
+}

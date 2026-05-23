@@ -1,0 +1,108 @@
+.sidebar{
+	flex: 3;
+	height: calc(100vh - 50px);
+	overflow-y: auto;
+	position: sticky;
+	top: 50px;
+  padding: 10px 0;
+}
+
+.sidebarWrapper{
+	padding: 20px;
+}
+.sidebarList{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.sidebarLink {
+  text-decoration: none;
+  color: inherit;
+}
+.sidebarUserLink {
+  text-decoration: none;
+  color: inherit;
+}
+.sidebarListItem{
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+.sidebarListItem:hover {
+  background-color: #f0f2f5;
+}
+
+/* ACTIVE ROUTE */
+.sidebarListItem.active {
+  background-color: #e7f3ff;
+  color: #1877f2;
+  font-weight: 500;
+}
+.sidebarListItemIcon{
+	margin-right: 15px;
+}
+.sidebarButton{
+	width: 150px;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	font-weight: 500;
+}
+.sidebarHr{
+	margin: 20px 0;
+}
+.sidebarFriendList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.sidebarFriendItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 8px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebarFriendItem:hover {
+  background-color: #f0f2f5;
+}
+
+.sidebarFriendImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.sidebarFriendName {
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

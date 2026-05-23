@@ -1,0 +1,104 @@
+.createPostCard{
+  width: 100%;
+  border-radius: 12px;
+  padding: 16px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0,0,0,1); 
+box-shadow: 0px 0px 16px -8px rgba(0,0,0,1);
+	margin-bottom: 25px;
+}
+
+/* Form Layout */
+.createPostForm{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Top Section */
+.topSection{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.profilePic{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.postInput{
+  flex: 1;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 15px;
+  line-height: 1.5;
+  min-height: 80px;
+  padding-top: 10px;
+  font-family: inherit;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* Divider */
+.createPostDivider{
+  border: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Bottom Section */
+.bottomSection{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Options Container */
+.optionsCntnr{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.postOption{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+}
+
+/* Share Button */
+.shareButton{
+  border: none;
+  background-color: #1877f2;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.shareButton:hover{
+  opacity: 0.9;
+}
+
+.shareButton:disabled{
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Error Message */
+.errorText{
+  color: red;
+  font-size: 14px;
+}
