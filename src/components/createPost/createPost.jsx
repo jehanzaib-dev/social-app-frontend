@@ -140,7 +140,7 @@ export default function CreatePost({postCreated}) {
           <button
             type="submit"
             className="shareButton"
-            disabled={isSubmitting || (!desc.trim() || !file)}
+            disabled={isSubmitting || (!desc.trim() && !file)}
           >
             {isSubmitting ? "Sharing..." : "Share"}
           </button>
