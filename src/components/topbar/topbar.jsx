@@ -77,13 +77,13 @@ export default function Topbar() {
         </div>
 
         <div className="topbarProfile">
-
-          <img
+          <Link to={`/profile/${user?.username}`}>
+            <img
             src={user?.profilePic ? PF + user.profilePic : '/assets/person/noAvatar.jpeg'}
             alt="profile"
             className="topbarImg"
-          />
-
+            />
+          </Link>
           <button
             className="logoutBtn"
             onClick={handleLogout}
