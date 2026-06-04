@@ -83,7 +83,7 @@ return (
 
           <PostCard
             key={post._id}
-            post={post}
+            post={post} setPosts={setPosts}
           />
 
         ))
