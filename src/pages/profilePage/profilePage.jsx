@@ -107,7 +107,7 @@ useEffect(() => {
 
   }}
 />
-       <img className="profileCoverImg"src={profileUser?.coverPic ? PF+profileUser.coverPic : '/assets/post/1.jpeg'}alt=""/>
+       <img className="profileCoverImg"src={profileUser?.coverPic ? PF+profileUser.coverPic : '/assets/person/noCover.jpeg'}alt=""/>
        {isOwnProfile && (
         <label htmlFor="coverInput" className="editCoverBtn">
         Change Cover
