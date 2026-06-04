@@ -128,7 +128,7 @@ export default function CreatePost({postCreated}) {
 
         <div className="optionsCntnr">
 
-          <input type="file" onChange={(e) =>setFile(e.target.files[0])}/>
+          <input type="file" onChange={(e) =>setFile(e.target.files[0])} className='postOption chooseFile'/>
           <span className="postOption">Document</span>
           <span className="postOption">Location</span>
           <span className="postOption">Feeling</span>

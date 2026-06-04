@@ -123,26 +123,27 @@ box-shadow: 0px 0px 16px -8px rgba(0,0,0,1);
     min-height: 70px;
     padding: 8px;
   }
-
   .bottomSection{
     flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
   }
-
   .optionsCntnr{
-    gap: 8px;
-    justify-content: center;
-  }
-
-  .postOption{
-    font-size: 10px;
-  }
-
-  .shareButton{
     width: 100%;
-    padding: 12px;
-    font-size: 14px;
+    gap: 8px;
   }
-
+  .chooseFile{
+    width: 160px;
+  }
+  .postOption{
+    font-size: 12px;
+  }
+  .btnCntnr{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .shareButton{
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 400;   
+  }
 }
