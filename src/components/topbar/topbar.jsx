@@ -6,6 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { Logout } from "../../context/authActions";
 import {Link} from 'react-router-dom';
 import {getAllUsersCall} from '../../apiCalls/apiCalls.js';
+import NotificationsIcon from "@mui/icons-material/Notifications";
+import ChatIcon from "@mui/icons-material/Chat";
 
 export default function Topbar() {
 
@@ -127,12 +129,12 @@ return (
         <div className="topbarIcons">
 
           <div className="topbarIconItem">
-            <span>🔔</span>
+            <NotificationsIcon className='topbarMuiIcon'/>
             <span className="topbarIconBadge">2</span>
           </div>
 
           <div className="topbarIconItem">
-            <span>💬</span>
+            <ChatIcon className='topbarMuiIcon'/>
             <span className="topbarIconBadge">5</span>
           </div>
 
