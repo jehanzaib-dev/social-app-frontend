@@ -56,6 +56,12 @@ return (
           Loading posts...
         </p>
 
+      ) : backendError ? (
+
+        <div className="errorMessage">
+          {backendError}
+        </div>
+
       ) : posts.length === 0 ? (
 
         <div className="emptyFeed">
