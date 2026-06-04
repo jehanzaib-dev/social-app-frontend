@@ -97,17 +97,15 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="sidebar">
+      <div
+      className={
+        isSidebarOpen
+          ? "sidebar mobileOpen"
+          : "sidebar"
+      }
+    >    
 
       <div className="sidebarWrapper">
-      <div
-  className={
-    isSidebarOpen
-      ? "sidebar mobileOpen"
-      : "sidebar"
-  }
->
-
         <ul className="sidebarList">
 
           {sidebarItems.map((item) => (
