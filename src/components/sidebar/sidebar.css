@@ -85,7 +85,11 @@
 .sidebarFriendName {
   font-size: 14px;
 }
-
+@media (max-width: 992px){
+  .sidebar{
+    flex: 1;
+  }
+}
 @media (max-width: 768px) {
   .sidebar {
     display: none;
