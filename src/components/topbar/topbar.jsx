@@ -51,11 +51,11 @@ return (
 
       {/* Left Section */}
       <div className="topbarLeft">
-
-        <span className="logo">
-          SocialSphere
-        </span>
-
+          <Link to="/home" className="logoLink">
+            <span className="logo">
+              SocialSphere
+            </span>
+          </Link>
       </div>
 
       {/* Center Section */}
