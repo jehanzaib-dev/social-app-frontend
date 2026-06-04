@@ -45,55 +45,47 @@ export default function Feed({username, refreshPosts}) {
 
   }, [user,username, refreshPosts]);
 
-  return (
-    <div className="feed">
+return (
 
-      {
-        isLoading && (
-          <p className="feedMessage">
-            Loading posts...
+  <div className="feed">
+
+    {
+      isLoading ? (
+
+        <p className="loadingMessage">
+          Loading posts...
+        </p>
+
+      ) : posts.length === 0 ? (
+
+        <div className="emptyFeed">
+
+          <h2>
+            Welcome to SocialSphere! 🎉
+          </h2>
+
+          <p>
+            Your feed is empty right now.
+            Create your first post above or follow some people to see their updates here.
           </p>
-        )
-      }
 
-      {
-        backendError && (
-          <p className="feedMessage errorMessage">
-            {backendError}
-          </p>
-        )
-      }
+        </div>
 
-      <div className="postsContainer">
-      {
-  posts.length === 0 ? (
+      ) : (
 
-    <div className="emptyFeed">
+        posts.map((post) => (
 
-      <h2>Welcome to SocialSphere! 🎉</h2>
+          <PostCard
+            key={post._id}
+            post={post}
+          />
 
-      <p>
-        It looks like your feed is empty.
-        Share your first post and start connecting
-        with people around the world.
-      </p>
+        ))
 
-    </div>
+      )
+    }
 
-  ) : (
+  </div>
 
-    posts.map((post) => (
-      <PostCard
-        key={post._id}
-        post={post} setPosts={setPosts}
-      />
-    ))
-
-  )
-}
-
-     </div>
-
-    </div>
-  );
+);
 }
