@@ -8,8 +8,9 @@ import {Link} from 'react-router-dom';
 import {getAllUsersCall} from '../../apiCalls/apiCalls.js';
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import ChatIcon from "@mui/icons-material/Chat";
+import MenuIcon from "@mui/icons-material/Menu";
 
-export default function Topbar() {
+export default function Topbar({toggleSidebar}) {
 
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const [searchTerm, setSearchTerm] = useState("");
@@ -53,6 +54,9 @@ return (
 
       {/* Left Section */}
       <div className="topbarLeft">
+        <div className="mobileMenu">
+            <MenuIcon className="menuIcon" onClick={toggleSidebar}/>
+        </div>
           <Link to="/home" className="logoLink">
             <span className="logo">
               SocialSphere

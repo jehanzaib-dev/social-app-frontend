@@ -17,7 +17,7 @@ import {getAllUsersCall} from '../../apiCalls/apiCalls.js';
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext.js";
 
-export default function SideBar() {
+export default function SideBar({isSidebarOpen}) {
 
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const {user}=useContext(AuthContext);
@@ -100,6 +100,13 @@ useEffect(() => {
     <div className="sidebar">
 
       <div className="sidebarWrapper">
+      <div
+  className={
+    isSidebarOpen
+      ? "sidebar mobileOpen"
+      : "sidebar"
+  }
+>
 
         <ul className="sidebarList">
 
@@ -142,7 +149,7 @@ useEffect(() => {
         <ul className="sidebarFriendList">
         {
         displayUsers.map((u) => (
-    <Link to={`/profile/${u.username}`} key={u._id} className="sidebarUserLink"
+    <Link to={`/profile/${u.username}`} key={u._id} className="sidebarUserLink" onClick={()=>setIsSidebarOpen(false)}
     >
     <li key={u._id} className="sidebarFriendItem">
 

@@ -16,6 +16,9 @@
   display: flex;
   align-items: center;
 }
+.mobileMenu{
+  display:none;
+}
 .logoLink{
   text-decoration: none;
 }
@@ -178,9 +181,21 @@
     padding: 0.75rem;
     height: auto;
   }
+  .mobileMenu{
+    display:flex;
+    align-items:center;
+  }
+  .menuIcon{
+  color:white;
+  cursor:pointer;
+  font-size:2rem !important;
+}
 
   .topbarLeft{
     flex: 1;
+  }
+   .logo{
+    font-size:1.2rem;
   }
 
   .topbarCenter{
