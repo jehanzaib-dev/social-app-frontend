@@ -65,17 +65,34 @@ export default function Feed({username, refreshPosts}) {
       }
 
       <div className="postsContainer">
+      {
+  posts.length === 0 ? (
 
-        {
-          posts.map((post) => (
-            <PostCard
-              key={post._id}
-              post={post} setPosts={setPosts}
-            />
-          ))
-        }
+    <div className="emptyFeed">
 
-      </div>
+      <h2>Welcome to SocialSphere! 🎉</h2>
+
+      <p>
+        It looks like your feed is empty.
+        Share your first post and start connecting
+        with people around the world.
+      </p>
+
+    </div>
+
+  ) : (
+
+    posts.map((post) => (
+      <PostCard
+        key={post._id}
+        post={post} setPosts={setPosts}
+      />
+    ))
+
+  )
+}
+
+     </div>
 
     </div>
   );

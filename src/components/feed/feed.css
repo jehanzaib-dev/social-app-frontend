@@ -11,6 +11,28 @@
     flex-direction: column;
     gap: 1.5rem;
 }
+.emptyFeed{
+  background:white;
+  border-radius:1rem;
+
+  padding:2rem;
+
+  text-align:center;
+
+  margin-top:1rem;
+
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+
+.emptyFeed h2{
+  margin-bottom:0.75rem;
+  color:#1877f2;
+}
+
+.emptyFeed p{
+  color:#666;
+  line-height:1.6;
+}
 
 .feedMessage{
     background-color: white;
