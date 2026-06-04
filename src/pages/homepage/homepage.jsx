@@ -22,7 +22,7 @@ export const HomePage = () => {
       <Topbar toggleSidebar={toggleSidebar}/>
 
       <div className="homeContainer">
-        <SideBar isSidebarOpen={isSidebarOpen}/>
+        <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}/>
 
         <div className="homeFeed">
           <CreatePost postCreated={handlePostCreated} />

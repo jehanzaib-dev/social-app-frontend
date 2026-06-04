@@ -17,7 +17,7 @@ import {getAllUsersCall} from '../../apiCalls/apiCalls.js';
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext.js";
 
-export default function SideBar({isSidebarOpen}) {
+export default function SideBar({isSidebarOpen, setIsSidebarOpen}) {
 
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const {user}=useContext(AuthContext);
