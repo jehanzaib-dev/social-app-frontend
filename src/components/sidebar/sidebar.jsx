@@ -147,7 +147,7 @@ useEffect(() => {
         <ul className="sidebarFriendList">
         {
         displayUsers.map((u) => (
-    <Link to={`/profile/${u.username}`} key={u._id} className="sidebarUserLink" onClick={()=>setIsSidebarOpen(false)}
+    <Link to={`/profile/${u.username}`} key={u._id} className="sidebarUserLink" onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
     >
     <li key={u._id} className="sidebarFriendItem">
 
