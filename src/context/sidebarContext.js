@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from "react";
 
-const SidebarContext = createContext();
+export const SidebarContext = createContext();
 
 export const SidebarProvider = ({ children }) => {
 
@@ -21,8 +21,4 @@ export const SidebarProvider = ({ children }) => {
       {children}
     </SidebarContext.Provider>
   );
-};
-
-export const useSidebar = () => {
-  return useContext(SidebarContext);
 };

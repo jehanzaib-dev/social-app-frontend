@@ -2,7 +2,7 @@
 import "./topbar.css";
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../../context/authContext.js";
-import {useSidebar} from '../../context/sidebarContext';
+import {SidebarContext} from '../../context/sidebarContext.js';
 import { useNavigate } from "react-router-dom";
 import { Logout } from "../../context/authActions";
 import {Link} from 'react-router-dom';
@@ -18,7 +18,7 @@ export default function Topbar() {
   const [allUsers, setAllUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const { user, dispatch } = useContext(AuthContext);
-  const {toggleSidebar}=useSidebar();
+  const {toggleSidebar}=useContext(SidebarContext);
   const navigate=useNavigate();
 
   const handleSearch = (e) => {
