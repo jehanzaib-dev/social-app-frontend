@@ -116,7 +116,7 @@ useEffect(() => {
             <Link
               to={item.path}
               className="sidebarLink"
-              key={item.text}
+              key={item.text} onClick={()=>setIsSidebarOpen(false)}
             >
 
               <li
