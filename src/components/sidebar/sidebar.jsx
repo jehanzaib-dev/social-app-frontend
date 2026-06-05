@@ -23,7 +23,7 @@ export default function SideBar() {
 
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const {user}=useContext(AuthContext);
-  const {isSidebarOpen}=useSidebar();
+  const {isSidebarOpen, setIsSidebarOpen}=useSidebar();
   const [users, setUsers]=useState([]);
   const location = useLocation();
   const displayUsers = users.map((u) => {
