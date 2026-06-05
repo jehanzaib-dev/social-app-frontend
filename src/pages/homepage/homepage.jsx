@@ -8,21 +8,17 @@ import { useState } from "react";
 
 export const HomePage = () => {
   const [refreshPosts, setRefreshPosts] = useState(false);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const handlePostCreated = () => {
     setRefreshPosts((prev) => !prev);
   };
-  const toggleSidebar = () => {
-  setIsSidebarOpen(prev => !prev);
-};
 
   return (
     <div className="homePage">
-      <Topbar toggleSidebar={toggleSidebar}/>
+      <Topbar/>
 
       <div className="homeContainer">
-        <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen}/>
+        <SideBar/>
 
         <div className="homeFeed">
           <CreatePost postCreated={handlePostCreated} />

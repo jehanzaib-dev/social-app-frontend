@@ -2,6 +2,7 @@
 import "./topbar.css";
 import { useState, useContext, useEffect } from "react";
 import { AuthContext } from "../../context/authContext.js";
+import {useSidebar} from '../../context/sidebarContext';
 import { useNavigate } from "react-router-dom";
 import { Logout } from "../../context/authActions";
 import {Link} from 'react-router-dom';
@@ -10,13 +11,14 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import ChatIcon from "@mui/icons-material/Chat";
 import MenuIcon from "@mui/icons-material/Menu";
 
-export default function Topbar({toggleSidebar}) {
+export default function Topbar() {
 
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const [searchTerm, setSearchTerm] = useState("");
   const [allUsers, setAllUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
   const { user, dispatch } = useContext(AuthContext);
+  const {toggleSidebar}=useSidebar();
   const navigate=useNavigate();
 
   const handleSearch = (e) => {

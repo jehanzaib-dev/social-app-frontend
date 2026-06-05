@@ -16,11 +16,14 @@ import {useState, useEffect} from 'react';
 import {getAllUsersCall} from '../../apiCalls/apiCalls.js';
 import { useContext } from "react";
 import { AuthContext } from "../../context/authContext.js";
+import {useSidebar} from '../../context/sidebarContext.js';
 
-export default function SideBar({isSidebarOpen, setIsSidebarOpen}) {
+
+export default function SideBar() {
 
   const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const {user}=useContext(AuthContext);
+  const {isSidebarOpen}=useSidebar();
   const [users, setUsers]=useState([]);
   const location = useLocation();
   const displayUsers = users.map((u) => {
