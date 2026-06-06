@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function PostCard({post, setPosts}) {
 
-  const PF=process.env.REACT_APP_PUBLIC_FOLDER;
+  const PF="http://localhost:5000/images/";
   const {user}=useContext(AuthContext);
   const [postCreator, setPostCreator]=useState(null);
   const [showMenu, setShowMenu]=useState(false);

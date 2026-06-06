@@ -1,22 +1,22 @@
-import { api } from "../api/api";
+import axios from "axios";
 
 export const RegisterCall=async(userData)=>{
-    const response=await api.post('/api/v1/auth/register', userData);
+    const response=await axios.post('/api/v1/auth/register', userData);
     return response.data;
 };
 
 export const loginCall = async (userCredentials) => {
-  const response = await api.post("/api/v1/auth/login", userCredentials);
+  const response = await axios.post("/api/v1/auth/login", userCredentials);
   return response.data;
 };
 
 export const getAllUsersCall=async()=>{
-  const response=await api.get('/api/v1/users');
+  const response=await axios.get('/api/v1/users');
   return response.data;
 }
 
 export const getOneUserCall=async(username)=>{
-  const response=await api.get(`/api/v1/users/${username}`);
+  const response=await axios.get(`/api/v1/users/${username}`);
   return response.data;
 }
 
@@ -24,7 +24,7 @@ export const getOneUserByIdCall =
   async (id) => {
 
     const response =
-      await api.get(
+      await axios.get(
         `/api/v1/users/id/${id}`
       );
 
@@ -33,7 +33,7 @@ export const getOneUserByIdCall =
 
 export const followUserCall = async (targetUserId, userId) => {
 
-  const response = await api.put(
+  const response = await axios.put(
     `/api/v1/users/${targetUserId}/follow`,
     { userId }
   );
@@ -42,7 +42,7 @@ export const followUserCall = async (targetUserId, userId) => {
 
 export const unfollowUserCall = async (targetUserId, userId) => {
 
-  const response = await api.put(
+  const response = await axios.put(
     `/api/v1/users/${targetUserId}/unfollow`,
     { userId }
   );
@@ -51,30 +51,30 @@ export const unfollowUserCall = async (targetUserId, userId) => {
 };
 
 export const CreatePostCall=async(postData)=>{
-  const response=await api.post('/api/v1/posts', postData);
+  const response=await axios.post('/api/v1/posts', postData);
   return response.data;
 }
 
 export const getAllPostsCall=async()=>{
-  const response=await api.get('/api/v1/posts');
+  const response=await axios.get('/api/v1/posts');
   return response.data;
 }
 
 export const getUserPostsCall=async(username)=>{
-  const response=await api.get(`/api/v1/posts/profile/${username}`);
+  const response=await axios.get(`/api/v1/posts/profile/${username}`);
   return response.data;
 }
 
 export const LikePostCall = async (postId, userId) => {
 
-    const response = await api.put(
+    const response = await axios.put(
       `/api/v1/posts/${postId}/like`, {userId} );
     return response.data;
   };
 
   export const DeletePostCall = async (postId, userId) => {
 
-    const response = await api.delete(
+    const response = await axios.delete(
       `/api/v1/posts/${postId}`,
       {
         data: { userId }
@@ -89,7 +89,7 @@ export const LikePostCall = async (postId, userId) => {
   updatedData
 ) => {
 
-  const response = await api.put(
+  const response = await axios.put(
     `/api/v1/posts/${postId}`,
     updatedData
   );
@@ -102,7 +102,7 @@ export const addCommentCall = async (
   commentData
 ) => {
 
-  const response = await api.put(
+  const response = await axios.put(
     `/api/v1/posts/${postId}/comment`,
     commentData
   );
@@ -114,7 +114,7 @@ export const getTimelinePostsCall =
   async (userId) => {
 
     const response =
-      await api.get(
+      await axios.get(
         `/api/v1/posts/timeline/${userId}`
       );
 
@@ -123,7 +123,7 @@ export const getTimelinePostsCall =
 
 export const uploadImageCall = async (formData) => {
 
-  const response = await api.post(
+  const response = await axios.post(
     "/api/v1/upload",
     formData
   );
@@ -136,7 +136,7 @@ export const updateUserCall = async (
   data
 ) => {
 
-  const response = await api.put(
+  const response = await axios.put(
     `/api/v1/users/${userId}`,
     data
   );

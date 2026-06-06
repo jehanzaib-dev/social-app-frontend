@@ -6,7 +6,7 @@ import { CreatePostCall, uploadImageCall } from "../../apiCalls/apiCalls.js";
 
 export default function CreatePost({postCreated}) {
 
-    const PF=process.env.REACT_APP_PUBLIC_FOLDER;
+    const PF="http://localhost:5000/images/";
   // Current logged-in user
   const { user } = useContext(AuthContext);
 

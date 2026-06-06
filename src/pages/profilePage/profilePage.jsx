@@ -10,7 +10,7 @@ import { AuthContext } from "../../context/authContext";
 import {getOneUserCall, uploadImageCall, updateUserCall} from '../../apiCalls/apiCalls.js';
 
 export default function Profile() {
-  const PF=process.env.REACT_APP_PUBLIC_FOLDER;
+  const PF="http://localhost:5000/images/";
   const { user:currentUser, dispatch } = useContext(AuthContext);
 const [profileUser, setProfileUser] = useState(null);
   const { username } = useParams();
