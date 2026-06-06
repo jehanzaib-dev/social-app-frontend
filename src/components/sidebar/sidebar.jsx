@@ -21,7 +21,7 @@ import {SidebarContext} from '../../context/sidebarContext.js';
 
 export default function SideBar() {
 
-  const PF="http://localhost:5000/images/";
+  const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const {user}=useContext(AuthContext);
   const {isSidebarOpen, setIsSidebarOpen}=useContext(SidebarContext);
   const [users, setUsers]=useState([]);

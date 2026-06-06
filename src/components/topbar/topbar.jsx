@@ -13,7 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Topbar() {
 
-  const PF="http://localhost:5000/images/";
+  const PF=process.env.REACT_APP_PUBLIC_FOLDER;
   const [searchTerm, setSearchTerm] = useState("");
   const [allUsers, setAllUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
