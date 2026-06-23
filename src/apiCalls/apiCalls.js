@@ -143,3 +143,19 @@ export const updateUserCall = async (
 
   return response.data;
 };
+
+export const GenerateTextCall = async (
+  prompt,
+  tone
+) => {
+
+  const response = await api.post(
+    "/api/v1/ai/generate-text",
+    {
+      prompt,
+      tone,
+    }
+  );
+
+  return response.data;
+};
